@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             try {
                 if (rbtnDolarEuro.isChecked()) {
-                    edtxtConversion.setText(miConversor.convertirAEuros(edtxtDolar.getText().toString()));
+                    edtxtEuro.setText(Double.toString(Double.parseDouble(edtxtDolar.getText().toString()) * Double.parseDouble(edtxtConversion.getText().toString())));
                 }
                 if (rbtnEuroDolar.isChecked()) {
-                    edtxtConversion.setText(miConversor.convertirADolares(edtxtEuro.getText().toString()));
+                    edtxtDolar.setText(Double.toString(Double.parseDouble(edtxtEuro.getText().toString()) / Double.parseDouble(edtxtConversion.getText().toString())));
                 }
             }
             catch (Exception e) {
